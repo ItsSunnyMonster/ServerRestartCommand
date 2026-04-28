@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "dev.sunnymonster.server_restart_command.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"MinecraftServerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
