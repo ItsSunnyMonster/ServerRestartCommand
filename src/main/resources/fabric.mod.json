@@ -5,7 +5,7 @@
 	"name": "Server Restart Command",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Averiesque"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -23,8 +23,8 @@
 		"server-restart-command.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.19.2",
-		"minecraft": "~26.1.2",
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}

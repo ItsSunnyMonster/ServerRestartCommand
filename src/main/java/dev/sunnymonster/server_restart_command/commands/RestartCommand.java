@@ -3,6 +3,7 @@ package dev.sunnymonster.server_restart_command.commands;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import dev.sunnymonster.server_restart_command.ServerRestartCommand;
+import dev.sunnymonster.server_restart_command.util.AdminPing;
 import dev.sunnymonster.server_restart_command.util.ServerSay;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
@@ -24,7 +25,7 @@ public class RestartCommand {
                 var players = server.getPlayerList().getPlayers();
                 // If only one player remains, and it is the player quitting
                 if (server.getPlayerCount() == 0 || (server.getPlayerCount() == 1 && players.getFirst().equals(handler.player))) {
-                    ServerSay.say(server, "Server empty, restarting. See chat log for reason.");
+                    ServerSay.say(server, AdminPing.getPingText() + "Server empty, restarting. See chat log for reason.");
                     Called = true;
                     server.halt(false);
                 }
